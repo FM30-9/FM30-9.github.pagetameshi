@@ -31,7 +31,7 @@ async function searchAnime() {
             resultsDiv.appendChild(div);
         });
     } catch (error) {
-        resultsDiv.innerHTML = "検索に失敗しました";
+        resultsDiv.innerHTML = "検索に失敗しましたm(_ _)m";
     }
 }
 
@@ -53,7 +53,7 @@ function addAnimeManual() {
     const img = document.getElementById('m-img').value;
     const memo = document.getElementById('m-memo').value;
 
-    if (!title) return alert("タイトルは必須です");
+    if (!title) return alert("タイトルを記入してね");
 
     const newItem = {
         id: Date.now(),
@@ -85,7 +85,7 @@ function updateMemo(id, newText) {
 }
 
 function deleteAnime(id) {
-    if (confirm("本当にこの記録を削除しますか？")) {
+    if (confirm("この記録を本当に削除しますか？")) {
         animeData = animeData.filter(item => item.id !== id);
         localStorage.setItem('myAnimeList', JSON.stringify(animeData));
         renderList();
@@ -134,10 +134,10 @@ function renderList() {
         ${imageHtml}
         <div class="anime-info">
             <h3>${item.title}</h3>
-            <div class="anime-date">放送・記録時期: ${item.date}</div>
+            <div class="anime-date">放送開始日: ${item.date}</div>
             <textarea 
                 class="memo-edit" 
-                placeholder="メモを記入..." 
+                placeholder="メモメモ..." 
                 onchange="updateMemo(${item.id}, this.value)">${item.memo}</textarea>
             <button class="delete-btn" onclick="deleteAnime(${item.id})">削除</button>
         </div>
@@ -158,5 +158,4 @@ function toggleManualForm() {
     }
 }
 
-// 初期表示
 renderList();
