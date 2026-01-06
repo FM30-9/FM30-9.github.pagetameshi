@@ -7,11 +7,11 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     background: var(--bg);
     margin: 0;
     padding: 20px;
-    color: #334155;
+    color: #213148;
 }
 
 .container {
@@ -150,17 +150,18 @@ button {
 
 .anime-info h3 {
     margin: 0 0 5px 0;
-    font-size: 18px;
+    font-size: 22px;
+    font-family: YuMincho, "Times New Roman", YuGothic;
 }
 
 .anime-date {
-    font-size: 12px;
+    font-size: 14px;
     color: #64748b;
-    margin-bottom: 10px;
+    margin: 0 0 15px 6px;
 }
 
 .memo-edit {
-    width: 100%;
+    width: 80%;
     border: 1px solid transparent;
     background: #f1f5f9;
     resize: none;
@@ -168,8 +169,9 @@ button {
     padding: 8px;
     box-sizing: border-box;
     border-radius: 4px;
-    color: #475569;
-    height: 60px;
+    color: #1d1d1d;
+    height: 55px;
+    line-height: 1.4;
 }
 
 .memo-edit:focus {
