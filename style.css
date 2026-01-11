@@ -195,3 +195,35 @@ button {
     background: var(--danger);
     color: white;
 }
+
+/* PC向けの調整 (画面幅600px以上) */
+@media (min-width: 600px) {
+    .input-group {
+        flex-direction: row;
+    }
+    
+    .anime-card {
+        flex-direction: row; /* 横並びに戻す */
+    }
+
+    .anime-card img, .no-image-placeholder {
+        width: 130px;
+        height: 190px;
+    }
+
+    .anime-info h3 {
+        padding-right: 120px;
+    }
+
+    .action-btns {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .memo-text, .edit-fields {
+        width: 85%;
+    }
+}
