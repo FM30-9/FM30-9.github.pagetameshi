@@ -13,7 +13,7 @@
     <div class="container">
         <header>
             <h1>自分のアニメ記録</h1>
-            <p>見たアニメを記録しておこう</p>
+            <p>見たアニメを記録しておこう！</p>
         </header>
 
         <section class="search-section">
@@ -21,14 +21,14 @@
                 <input type="text" id="search-input" placeholder="アニメのタイトルを入力..."
                     onkeypress="if(event.key === 'Enter') searchAnime()">
                 <button class="btn-main" onclick="searchAnime()">APIで検索</button>
-                <button class="btn-manual" onclick="toggleManualForm()">手動で追加</button>
+                <button class="btn-manual" onclick="toggleManualForm()">自分で入力</button>
             </div>
             <div id="search-results"></div>
             <div id="manual-form">
-                <h4>手動で詳細を入力</h4>
+                <h4>自分で詳細を入力</h4>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
                     <input type="text" id="m-title" placeholder="タイトル">
-                    <input type="text" id="m-date" placeholder="放送時期 (例: 2024年10月)">
+                    <input type="text" id="m-date" placeholder="放送開始日 (例: 2025/10/13)">
                     <input type="text" id="m-img" placeholder="画像URL">
                     <button class="btn-main" onclick="addAnimeManual()">リストに追加</button>
                 </div>
